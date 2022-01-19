@@ -6,25 +6,33 @@
 //
 
 import UIKit
+import DropDown
 
 class DashboardVC: UIViewController {
-
+    
     @IBOutlet var mainTableView: UITableView!
+    @IBOutlet var firstBtn: UIButton!
+    @IBOutlet var secondBtn: UIButton!
     
     var mainArray = [MainDefaults]()
     var detailArray = [L]()
+    var selectedArray = [Mypage]()
+    var menuArray = [String]()
     var myTimer = Timer()
-    
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    let menu  = DropDown()
+    let secondMenu = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainTableView.register(DashboardCell.nib(), forCellReuseIdentifier: DashboardCell.identifier)
         getData()
-        myTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(dataUpdate), userInfo: nil, repeats: true)
+        getSelectedData()
+        conf()
+        menuConf()
+    }
+    
+    func conf() {
+        mainTableView.register(DashboardCell.nib(), forCellReuseIdentifier: DashboardCell.identifier)
+        myTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(dataUpdate), userInfo: nil, repeats: true)
     }
     
     @objc func dataUpdate() {
@@ -33,9 +41,9 @@ class DashboardVC: UIViewController {
     }
     
     func getDetailData(tke: [MainDefaults]) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
             tke.forEach { x in
-                WebService.getPageDetail(tke: x.tke) { [self] result in
+                WebService.getPageDetail(firstItem: "las", secondItem: "pdd", tke: x.tke) { [self] result in
                     detailArray.append(contentsOf: result)
                     mainTableView.reloadData()
                 }
@@ -51,6 +59,41 @@ class DashboardVC: UIViewController {
                 getDetailData(tke: res)
             }
         }
+    }
+    
+    func getSelectedData() {
+        DispatchQueue.main.async {
+            WebService.getMainName { [self] resName in
+                selectedArray.append(contentsOf: resName)
+                selectedArray.forEach { y in
+                    menuArray.append(y.name)
+                    menu.dataSource = menuArray
+                    secondMenu.dataSource = menuArray
+                }
+            }
+        }
+    }
+    
+    func menuConf() {
+        menu.anchorView = firstBtn
+        secondMenu.anchorView = secondBtn
+        menu.selectionAction = { [self] (index: Int, item: String) in
+            firstBtn.setTitle(item, for: .normal)
+        }
+        secondMenu.selectionAction = { [self] (index: Int, item: String) in
+            secondBtn.setTitle(item, for: .normal)
+        }
+    }
+    
+    @IBAction func firstBtnClicked(_ sender: Any) {
+        menu.show()
+    }
+    @IBAction func secondBtnClicked(_ sender: Any) {
+        secondMenu.show()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
@@ -70,7 +113,6 @@ extension DashboardVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-    
 }
 
 

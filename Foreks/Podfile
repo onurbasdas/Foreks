@@ -8,5 +8,6 @@ target 'Foreks' do
   # Pods for Foreks
 
 pod 'Alamofire', '~> 5.5'
+pod 'DropDown'
 
 end

@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 class WebService {
+    
     static func getPageDefaults(completion:@escaping ([MainDefaults]) -> ()) {
         AF.request(Constants.baseURL + Constants.settingsURL, method: .get,encoding: JSONEncoding.default).response{ response in
             guard let data = response.data else {return}
@@ -21,8 +22,20 @@ class WebService {
         }
     }
     
-    static func getPageDetail(tke: String, completion:@escaping ([L]) -> ()) {
-        AF.request(Constants.baseURL + Constants.interViewURL + tke, method: .get,encoding: JSONEncoding.default).response{ response in
+    static func getMainName(completion:@escaping ([Mypage]) -> ()) {
+        AF.request(Constants.baseURL + Constants.settingsURL, method: .get,encoding: JSONEncoding.default).response{ response in
+            guard let data = response.data else {return}
+            do {
+                let pageResponse = try JSONDecoder().decode(Defaults.self, from:data)
+                completion(pageResponse.mypage)
+            }catch let e {
+                print(e)
+            }
+        }
+    }
+    
+    static func getPageDetail(firstItem: String, secondItem: String, tke: String, completion:@escaping ([L]) -> ()) {
+        AF.request(Constants.baseURL + Constants.interViewURL + firstItem + "," + secondItem + "&stcs=" + tke, method: .get,encoding: JSONEncoding.default).response{ response in
             guard let data = response.data else {return}
             do {
                 let pageResponse = try JSONDecoder().decode(HTTPSInterview.self, from:data)

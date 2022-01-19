@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,59 +33,57 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euk-xh-1zW">
-                                                    <rect key="frame" x="184" y="109" width="30" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                                    <menu key="menu" title="Seçiniz" id="dwE-v3-YgO">
-                                                        <children>
-                                                            <command title="Item 1" id="o4C-Wg-dMh"/>
-                                                            <command title="Item 2" id="lRD-Eb-21D"/>
-                                                        </children>
-                                                    </menu>
-                                                    <state key="normal" title="Son">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="titleShadowColor" systemColor="labelColor"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-Qt-DBz">
-                                                    <rect key="frame" x="306" y="109" width="44" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                                    <menu key="menu" id="Wmm-ge-kEi">
-                                                        <children>
-                                                            <command title="Item 1" id="aJY-xN-ODW"/>
-                                                            <command title="Item 2" id="MHe-Ra-zTm"/>
-                                                        </children>
-                                                    </menu>
-                                                    <state key="normal" title="%Fark">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-hA-Heq">
+                                                    <rect key="frame" x="184" y="110" width="210" height="32"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euk-xh-1zW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="32"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                            <state key="normal" title="Son">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="titleShadowColor" systemColor="labelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="firstBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hsn-RK-h1B"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-Qt-DBz">
+                                                            <rect key="frame" x="105" y="0.0" width="105" height="32"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                            <state key="normal" title="%Fark">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="secondBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUv-aw-Lti"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sembol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBd-TF-ajJ">
-                                                    <rect key="frame" x="16" y="100" width="68" height="50"/>
+                                                    <rect key="frame" x="16" y="101" width="68" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="B1h-Pr-SOs"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOREKS TRADER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD9-Qz-2x9">
-                                                    <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                                    <rect key="frame" x="0.0" y="50" width="414" height="26"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3EG-hA-Heq" secondAttribute="trailing" constant="20" id="0l2-d1-Hpe"/>
                                                 <constraint firstItem="dD9-Qz-2x9" firstAttribute="top" secondItem="oi5-bw-RaB" secondAttribute="top" constant="50" id="6uN-zr-BRt"/>
-                                                <constraint firstItem="ZBd-TF-ajJ" firstAttribute="top" secondItem="dD9-Qz-2x9" secondAttribute="bottom" id="7Cp-JM-11A"/>
-                                                <constraint firstItem="euk-xh-1zW" firstAttribute="centerY" secondItem="ZBd-TF-ajJ" secondAttribute="centerY" id="8Yr-vo-iHM"/>
-                                                <constraint firstAttribute="trailing" secondItem="0nn-Qt-DBz" secondAttribute="trailing" constant="64" id="Dav-g0-mWI"/>
-                                                <constraint firstItem="ZBd-TF-ajJ" firstAttribute="top" secondItem="oi5-bw-RaB" secondAttribute="top" constant="100" id="SGu-vE-zAX"/>
+                                                <constraint firstItem="ZBd-TF-ajJ" firstAttribute="leading" secondItem="oi5-bw-RaB" secondAttribute="leading" constant="16" id="SL0-Ta-jNO"/>
                                                 <constraint firstAttribute="trailing" secondItem="dD9-Qz-2x9" secondAttribute="trailing" id="XHk-r6-DCx"/>
-                                                <constraint firstItem="0nn-Qt-DBz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="euk-xh-1zW" secondAttribute="trailing" symbolic="YES" id="oP8-fe-1Jn"/>
-                                                <constraint firstItem="euk-xh-1zW" firstAttribute="leading" secondItem="ZBd-TF-ajJ" secondAttribute="trailing" constant="100" id="u1L-7n-NOl"/>
+                                                <constraint firstItem="ZBd-TF-ajJ" firstAttribute="top" secondItem="dD9-Qz-2x9" secondAttribute="bottom" constant="25" id="drw-VL-kYA"/>
+                                                <constraint firstItem="3EG-hA-Heq" firstAttribute="centerY" secondItem="ZBd-TF-ajJ" secondAttribute="centerY" id="lcM-xk-h9A"/>
                                                 <constraint firstItem="dD9-Qz-2x9" firstAttribute="leading" secondItem="oi5-bw-RaB" secondAttribute="leading" id="vw8-PI-y2f"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZBd-TF-ajJ" secondAttribute="bottom" id="xUB-6z-Jft"/>
-                                                <constraint firstItem="ZBd-TF-ajJ" firstAttribute="leading" secondItem="oi5-bw-RaB" secondAttribute="leading" constant="16" id="xV9-QL-E6j"/>
-                                                <constraint firstItem="0nn-Qt-DBz" firstAttribute="centerY" secondItem="ZBd-TF-ajJ" secondAttribute="centerY" id="y0t-1W-n4R"/>
+                                                <constraint firstItem="3EG-hA-Heq" firstAttribute="leading" secondItem="ZBd-TF-ajJ" secondAttribute="trailing" constant="100" id="wt6-z9-jPp"/>
                                             </constraints>
                                         </view>
                                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -117,7 +114,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Foreks" id="Dl5-fI-3a9"/>
                     <connections>
+                        <outlet property="firstBtn" destination="euk-xh-1zW" id="PEV-ih-ZRb"/>
                         <outlet property="mainTableView" destination="f0r-ew-R2A" id="MNZ-8z-al4"/>
+                        <outlet property="secondBtn" destination="0nn-Qt-DBz" id="38v-XE-t19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -20,11 +20,9 @@ class DashboardCell: UITableViewCell {
     @IBOutlet var lblFirst: UILabel!
     @IBOutlet var lblSecond: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     
     func loadData(code: MainDefaults, data: L) {
         lblCode.text = code.cod
