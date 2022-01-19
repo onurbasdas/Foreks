@@ -15,6 +15,11 @@ class DashboardVC: UIViewController {
     var detailArray = [L]()
     var myTimer = Timer()
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTableView.register(DashboardCell.nib(), forCellReuseIdentifier: DashboardCell.identifier)
