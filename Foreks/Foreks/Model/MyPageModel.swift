@@ -1,5 +1,5 @@
 //
-//  pageDefaultsModel.swift
+//  MyPageModel.swift
 //  Foreks
 //
 //  Created by Onur Başdaş on 18.01.2022.

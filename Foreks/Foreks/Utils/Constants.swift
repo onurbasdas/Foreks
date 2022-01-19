@@ -8,5 +8,7 @@
 import Foundation
 
 class Constants {
-    static let baseUrl = "https://sui7963dq6.execute-api.eu-central-1.amazonaws.com/default/ForeksMobileInterviewSettings"
+    static let baseURL = "https://sui7963dq6.execute-api.eu-central-1.amazonaws.com/default"
+    static let settingsURL = "/ForeksMobileInterviewSettings"
+    static let interViewURL = "/ForeksMobileInterview?fields=pdd,las&stcs="
 }

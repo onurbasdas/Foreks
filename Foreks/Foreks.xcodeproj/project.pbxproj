@@ -8,38 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		28860915F310D7A4A72088BC /* Pods_Foreks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F47A295992B608C6FF0612 /* Pods_Foreks.framework */; };
-		B908BDBC27974BF000A5E29D /* dashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDBA27974BF000A5E29D /* dashboardCell.swift */; };
-		B908BDBD27974BF000A5E29D /* dashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B908BDBB27974BF000A5E29D /* dashboardCell.xib */; };
+		B908BDBC27974BF000A5E29D /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDBA27974BF000A5E29D /* DashboardCell.swift */; };
+		B908BDBD27974BF000A5E29D /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B908BDBB27974BF000A5E29D /* DashboardCell.xib */; };
 		B908BDBF27974C2F00A5E29D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDBE27974C2F00A5E29D /* Service.swift */; };
 		B908BDC127974CEE00A5E29D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDC027974CEE00A5E29D /* Constants.swift */; };
-		B908BDC327974D7300A5E29D /* pageDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDC227974D7300A5E29D /* pageDefaultsModel.swift */; };
+		B908BDC327974D7300A5E29D /* MyPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDC227974D7300A5E29D /* MyPageModel.swift */; };
 		B908BDC527975AA600A5E29D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908BDC427975AA600A5E29D /* CardView.swift */; };
 		B98F58BA279717FC004CA913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F58B9279717FC004CA913 /* AppDelegate.swift */; };
 		B98F58BC279717FC004CA913 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F58BB279717FC004CA913 /* SceneDelegate.swift */; };
-		B98F58BE279717FC004CA913 /* dashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F58BD279717FC004CA913 /* dashboardVC.swift */; };
+		B98F58BE279717FC004CA913 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F58BD279717FC004CA913 /* DashboardVC.swift */; };
 		B98F58C1279717FC004CA913 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98F58BF279717FC004CA913 /* Main.storyboard */; };
 		B98F58C3279717FE004CA913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98F58C2279717FE004CA913 /* Assets.xcassets */; };
 		B98F58C6279717FE004CA913 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98F58C4279717FE004CA913 /* LaunchScreen.storyboard */; };
+		B9E7F14E27982FF800599F15 /* InterviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E7F14D27982FF800599F15 /* InterviewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18F47A295992B608C6FF0612 /* Pods_Foreks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foreks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6BA1670ED7652423727DCF /* Pods-Foreks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foreks.debug.xcconfig"; path = "Target Support Files/Pods-Foreks/Pods-Foreks.debug.xcconfig"; sourceTree = "<group>"; };
 		B01EDFC3E9BC17818F11BFC7 /* Pods-Foreks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foreks.release.xcconfig"; path = "Target Support Files/Pods-Foreks/Pods-Foreks.release.xcconfig"; sourceTree = "<group>"; };
-		B908BDBA27974BF000A5E29D /* dashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardCell.swift; sourceTree = "<group>"; };
-		B908BDBB27974BF000A5E29D /* dashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dashboardCell.xib; sourceTree = "<group>"; };
+		B908BDBA27974BF000A5E29D /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		B908BDBB27974BF000A5E29D /* DashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
 		B908BDBE27974C2F00A5E29D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B908BDC027974CEE00A5E29D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B908BDC227974D7300A5E29D /* pageDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageDefaultsModel.swift; sourceTree = "<group>"; };
+		B908BDC227974D7300A5E29D /* MyPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModel.swift; sourceTree = "<group>"; };
 		B908BDC427975AA600A5E29D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B98F58B6279717FC004CA913 /* Foreks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foreks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98F58B9279717FC004CA913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98F58BB279717FC004CA913 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B98F58BD279717FC004CA913 /* dashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardVC.swift; sourceTree = "<group>"; };
+		B98F58BD279717FC004CA913 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		B98F58C0279717FC004CA913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B98F58C2279717FE004CA913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B98F58C5279717FE004CA913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98F58C7279717FE004CA913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9E7F14D27982FF800599F15 /* InterviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,8 @@
 		B908BDB527974AEF00A5E29D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B908BDC227974D7300A5E29D /* pageDefaultsModel.swift */,
+				B908BDC227974D7300A5E29D /* MyPageModel.swift */,
+				B9E7F14D27982FF800599F15 /* InterviewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -82,7 +85,7 @@
 		B908BDB627974AF700A5E29D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B98F58BD279717FC004CA913 /* dashboardVC.swift */,
+				B98F58BD279717FC004CA913 /* DashboardVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -90,8 +93,8 @@
 		B908BDB727974B0000A5E29D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B908BDBA27974BF000A5E29D /* dashboardCell.swift */,
-				B908BDBB27974BF000A5E29D /* dashboardCell.xib */,
+				B908BDBA27974BF000A5E29D /* DashboardCell.swift */,
+				B908BDBB27974BF000A5E29D /* DashboardCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 			files = (
 				B98F58C6279717FE004CA913 /* LaunchScreen.storyboard in Resources */,
 				B98F58C3279717FE004CA913 /* Assets.xcassets in Resources */,
-				B908BDBD27974BF000A5E29D /* dashboardCell.xib in Resources */,
+				B908BDBD27974BF000A5E29D /* DashboardCell.xib in Resources */,
 				B98F58C1279717FC004CA913 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,11 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98F58BE279717FC004CA913 /* dashboardVC.swift in Sources */,
+				B98F58BE279717FC004CA913 /* DashboardVC.swift in Sources */,
 				B98F58BA279717FC004CA913 /* AppDelegate.swift in Sources */,
 				B908BDBF27974C2F00A5E29D /* Service.swift in Sources */,
-				B908BDC327974D7300A5E29D /* pageDefaultsModel.swift in Sources */,
-				B908BDBC27974BF000A5E29D /* dashboardCell.swift in Sources */,
+				B9E7F14E27982FF800599F15 /* InterviewModel.swift in Sources */,
+				B908BDC327974D7300A5E29D /* MyPageModel.swift in Sources */,
+				B908BDBC27974BF000A5E29D /* DashboardCell.swift in Sources */,
 				B98F58BC279717FC004CA913 /* SceneDelegate.swift in Sources */,
 				B908BDC527975AA600A5E29D /* CardView.swift in Sources */,
 				B908BDC127974CEE00A5E29D /* Constants.swift in Sources */,
