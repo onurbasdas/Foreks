@@ -35,7 +35,8 @@ class WebService {
     }
     
     static func getPageDetail(firstItem: String, secondItem: String, tke: String, completion:@escaping ([L]) -> ()) {
-        AF.request(Constants.baseURL + Constants.interViewURL + firstItem + "," + secondItem + "&stcs=" + tke, method: .get,encoding: JSONEncoding.default).response{ response in
+        let URL = Constants.baseURL + Constants.interViewURL + firstItem + "," + secondItem + "&stcs=" + tke
+        AF.request(URL, method: .get,encoding: JSONEncoding.default).response{ response in
             guard let data = response.data else {return}
             do {
                 let pageResponse = try JSONDecoder().decode(HTTPSInterview.self, from:data)
